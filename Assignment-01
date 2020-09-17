@@ -65,7 +65,7 @@ $javac HelloWorld.java
 $java Helloworld
 
 Q.4)
-public class HelloWorld{
+public class userN{
      public static void main(String []args){
      int i = 127;
      byte b = (byte)i;           //down casting
@@ -75,3 +75,15 @@ System.out.println("b="+b);
 
 Q.5)
 
+public class HelloWorld{
+     public static void main(String []args){
+    String s1 = args[0];
+     System.out.println("Welcome "+s1);
+     }
+}
+
+$javac userN.java
+$java userN
+$userN "Akshay Deshmukh"
+
+Q.6)
