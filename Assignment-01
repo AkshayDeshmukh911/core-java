@@ -150,7 +150,53 @@ $java interestS
 
 Q.9)
 
-Q.13)
+import java.util.Scanner;
+public class Year_Week_Day 
+{
+    public static void main(String args[])
+    {
+        int m, year, week, day;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of days:");
+        int x = sc.nextInt();
+        int year = x / 365;
+        x = x % 365;
+        System.out.println("No. of years:"+year);
+        int week = x / 7;
+        x = x % 7;
+        System.out.println("No. of weeks:"+week);
+        int day = x;
+        System.out.println("No. of days:"+day);
+    }
+}
+
+$ javac Year_Week_Day.java
+$ java Year_Week_Day
+
+Q.11)
+import java.util.Scanner; 
+public class Swapping{
+ public static void main (String []args){
+      Scanner sc = new Scanner (System.in);
+           System.out.println ("Enter the Numbers" ); 
+             int x = sc.nextInt(); 
+             int y = sc.nextInt(); 
+           System.out.println ("Number before swap"); 
+           System.out.println(x); 
+           System.out.println(y); 
+              x=x+y; 
+              y=x-y; 
+              x=x-y; 
+       System.out.println ("Number after swap" ); 
+       System.out.println(x); 
+       System.out.println(y); 
+  } 
+ }
+
+$ javac Swapping.java
+$ java Swapping
+
+Q.13)(A: if-else)
 import java.util.Scanner; 
 public class gretestN{ 
 public static void main (String []args){ 
@@ -172,6 +218,9 @@ else{
 
 $javac gretestN.java
 $java gretestN
+
+(B: Ternary Operator)
+
 
 Q.14)
 import java.util.Scanner;
