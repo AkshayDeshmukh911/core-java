@@ -149,3 +149,44 @@ $javac interestS.java
 $java interestS
 
 Q.9)
+
+Q.13)
+import java.util.Scanner; 
+public class gretestN{ 
+public static void main (String []args){ 
+Scanner sc = new Scanner (System.in); 
+int A = sc.nextInt(); 
+int B = sc.nextInt(); 
+int C = sc.nextInt();
+ if(A>B && A>C){ 
+System.out.println(A+" is gretest number");
+ }
+ if(B>A && B>C){
+ System.out.prihtln(B +"is gretest number"); 
+}
+else{
+ System.out.println(C+" is greatest number);
+  }
+ }
+}
+
+$javac gretestN.java
+$java gretestN
+
+Q.14)
+import java.util.Scanner;
+public class LeapY{
+public static void main(String args[]){
+ Scanner sc = new Scanner (System.in);
+  int A = sc.nextInt();
+if(a%4==0){
+System.out.println(A+" is leap year");
+}
+else{
+System.out.println(A+" is not leap year");
+  }
+ }
+}
+
+$javac LeapY.java
+$java LeapY
