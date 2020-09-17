@@ -89,3 +89,19 @@ $java userN
 $userN "Akshay Deshmukh"
 
 Q.6)
+import java.util.Scanner;
+Public class radiusC{
+public static void main(String []args){
+   Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the radius");
+        double r = sc.nextDouble();
+          r = (3.14 * r * r);
+ System.out.println("Area of circle is "+r);
+  }
+}
+
+$javac radiusC.java
+$java radiusC
+Input--> 12
+
+Q.7)
