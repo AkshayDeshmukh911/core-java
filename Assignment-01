@@ -105,3 +105,47 @@ $java radiusC
 Input--> 12
 
 Q.7)
+importar java.util.Scanner;  
+public class percentage{
+ public static void main (String ar []){
+    Scanner sc = new Scanner (System.in); 
+       int n = 5;  
+System.out.print ("Enter the marks of CPP:");
+ int cpp = sc.nextInt ();  
+System.out.print ("Enter the marks of DS:");  
+int ds = sc.nextInt ();  
+System.out.print ("Enter the marks of DB:");  
+int db = sc.nextInt ();  
+System.out.print ("Enter the marks of AWP:"); 
+ int awp = sc.nextInt ();  
+System.out.print ("Enter the marks of MEAN:");  
+int mean = sc.nextInt ();  
+
+double result = (doble) ((cpp + ds + db + awp + mean) /5.0);  
+  System.out.println("result:" +result+"%");
+     }
+}
+
+$javac percentage.java
+$java percentage
+
+Q.8)
+importar java.util.Scanner;  
+public class interestS{
+ public static void main (String ar []){
+    Scanner sc = new Scanner (System.in); 
+System.out.print ("Enter the principal amount:");
+ double pa = sc.nextDouble ();  
+System.out.print ("Enter the rate of interest:");  
+double ri = sc.nextDouble ();
+System.out.print ("Enter the time:");  
+double t = sc.nextDouble ();  
+  double SI = (pa * ri * t)/100.0;
+System.out.println("Simple interest = $"+SI);
+  }
+}
+
+$javac interestS.java
+$java interestS
+
+Q.9)
