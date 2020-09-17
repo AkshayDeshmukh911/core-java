@@ -25,3 +25,28 @@ $java rollno
 
 Q.3)
 
+public class HelloWorld{
+     public static void main(String []args){
+     int x=4;
+    int y = (x*x)+(3*x)-7;
+        System.out.println("y="+y);
+ 
+    y = (x++)+(++x);
+    System.out.println("y="+y);
+System.out.println("x="+x);
+
+int z = (x++)-(--y)-(--x)+(x++);
+System.out.println("z="+z);
+System.out.println("x="+x);
+System.out.println("y="+y);
+
+z = x&&y || !(x||y);
+System.out.println("z="+z);
+  }
+ }
+
+$javac expression.java
+$java expression
+
+Q.4)
+
