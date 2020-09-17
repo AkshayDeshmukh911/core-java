@@ -28,25 +28,41 @@ Q.3)
 public class HelloWorld{
      public static void main(String []args){
      int x=4;
+
+//*(A)*//
     int y = (x*x)+(3*x)-7;
         System.out.println("y="+y);
- 
+
+ //*(B)//
     y = (x++)+(++x);
     System.out.println("y="+y);
 System.out.println("x="+x);
 
+//*(C)*//
 int z = (x++)-(--y)-(--x)+(x++);
 System.out.println("z="+z);
 System.out.println("x="+x);
 System.out.println("y="+y);
-
-z = x&&y || !(x||y);
-System.out.println("z="+z);
   }
  }
 
 $javac expression.java
 $java expression
+
+D) 
+//*(D)*//
+public class HelloWorld{
+     public static void main(String []args){
+     boolean x = true;
+boolean y = false;
+
+boolean z = (x && y) || (!(x||y));
+System.out.println("z="+z);
+  }
+ }
+
+$javac HelloWorld.java
+$java Helloworld
 
 Q.4)
 
