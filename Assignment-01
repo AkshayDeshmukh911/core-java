@@ -1,1 +1,27 @@
 
+Q.1)
+public class HelloWorld{
+
+     public static void main(String args[]){
+    System.out.println("Hello world");
+System.out.println("Hello i am Akshay");
+     }
+}
+
+$javac HelloWorld.java
+$java HelloWorld
+
+Q.2)
+public class rollno{
+
+     public static void main(String args[]){
+       int i=100;
+    System.out.println("roll no="+i);
+     }
+}
+
+$javac rollno.java
+$java rollno
+
+Q.3)
+
