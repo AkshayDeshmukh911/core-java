@@ -218,7 +218,37 @@ $ javac Swapping.java
 $ java Swapping
 
 Q.12)
+import java.util.Scanner;
+public class Salary{
+     
+    public static void main(String abc[])
+    {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter basic salary");
+		float bsal=sc.nextFloat();
+		if(bsal < 10000)
+		{
+			float HRA=(bsal*10) /100 ;
+			float DA=(bsal*90)/100;
+		    float GS=bsal+DA+HRA;
+			System.out.println("Gross sal for bsal " +bsal + " is " +GS );
+		}
+		else if(bsal >= 10000)
+		{
+		    float HRA=2000;
+			float DA=(bsal * 90)/100;
+		    float GS=bsal+DA+HRA;
+			System.out.println("Gross sal for bsal " +bsal + " is " +GS );
+		}
+		else{
+			
+			System.out.println("Invalid sal" );
+	}
+}
+}
 
+$ javac Salary.java
+$ java Salary
 
 Q.13)(A: if-else)
 import java.util.Scanner; 
