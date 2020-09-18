@@ -89,32 +89,38 @@ $ java Series2
 
 Q.20)
 import java.util.Scanner;
-public PrimeDemo{
-  public static void main (String args []){
-    Scanner sc = new Scanner(System.in);
-     int i,j,k;
-     int prime=1;
-     System.out.println("Enter the Number");
-     j = sc.nextInt();
-     System.out.println("Enter the Number");
-     k = sc.nextInt();
-       for(i=k;i<j;i++){
-            if((j%i)==0){
-                 prime=0;
-               }
-             }
-if (prime == 1){
-      System.out.println(j+" is prime number");
+public class PrimeNumbers
+
+{
+   public static void main (String[] args)
+   {		
+       int i =0;
+       int num =0;
+       //Empty String
+       String  primeNumbers = "";
+
+       for (i = 1; i <= 100; i++)         
+       { 		  	  
+          int counter=0; 	  
+          for(num =i; num>=1; num--)
+	  {
+             if(i%num==0)
+	     {
+ 		counter = counter + 1;
+	     }
+	  }
+	  if (counter ==2)
+	  {
+	 
+	     primeNumbers = primeNumbers + i + " ";
+	  }	
+       }	
+       System.out.println("Prime numbers from 1 to 100 are :");
+       System.out.println(primeNumbers);
    }
-   else{
-      System.out.println(j+" is not a prime number");
-   }
- }
 }
 
-$ javac PrimeDemo.java
-$ java PrimeDemo
+$ javac PrimeNumbers.java
+$ java PrimeNumbers
 
 Q.21)
-
-         
