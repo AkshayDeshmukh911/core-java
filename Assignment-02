@@ -1,1 +1,120 @@
+Q.16)
+import java.util.Scanner; 
+public class TablesC{
+ public static void main (String []args){ 
+      Scanner sc = new Scanner (System.in); 
+       int i sc. nextInt();
+              for(int j=1;j<=10;j++){ 
+                   int res= i * j; 
+                 System.out.println(res); 
+   } 
+  }
+}
 
+$javac TablesC.java
+$java TablesC
+
+Q.17)
+
+Q.18)
+import java.util.Scanner;
+public PrimeNum{
+  public static void main (String args []){
+    Scanner sc = new Scanner(System.in);
+     int i,j;
+     int prime=1;
+     System.out.println("Enter the Number");
+     j = sc.nextInt();
+       for(i=2;i<j;i++){
+            if((j%i)==0){
+                 prime=0;
+               }
+             }
+if (prime == 1){
+      System.out.println(j+" is prime number");
+   }
+   else{
+      System.out.println(j+" is not a prime number");
+   }
+ }
+}
+
+$ javac PrimeNum.java
+$ java PrimeNum
+
+Q.19)
+--(A)--
+import java.util.Scanner; 
+public class Series1{
+ public static void main (String []args){
+  Scanner sC = new Scanner (System.in);
+     int i,num; 
+     int sum=0; 
+     int p=0; 
+num=sc.nextInt(); 
+      int k=2; 
+      int d=10; 
+for(i=2;i<=num;i++){ 
+    sum=(k+(i-1)*d); 
+System.out.print(sum+" ");
+ p=p+sum; 
+   } 
+ System.out.println ("Series sum="+p); 
+ }
+}
+
+$ javac Series1.java
+$ java Series1
+
+--(B)--
+import java.util.Scanner; 
+public class Series2{
+ public static void main (String []args){
+  Scanner sC = new Scanner (System.in);
+     int i,num; 
+     int sum=0; 
+     int p=0; 
+num=sc.nextInt(); 
+for(i=2;i<=num;i++){ 
+    sum=((2*i-1)*(2*i-1)); 
+System.out.print(sum+" ");
+ p=p+sum; 
+   } 
+ System.out.println ("Series sum="+p); 
+ }
+}
+
+$ javac Series2.java
+$ java Series2
+
+Q.20)
+import java.util.Scanner;
+public PrimeDemo{
+  public static void main (String args []){
+    Scanner sc = new Scanner(System.in);
+     int i,j,k;
+     int prime=1;
+     System.out.println("Enter the Number");
+     j = sc.nextInt();
+     System.out.println("Enter the Number");
+     k = sc.nextInt();
+       for(i=k;i<j;i++){
+            if((j%i)==0){
+                 prime=0;
+               }
+             }
+if (prime == 1){
+      System.out.println(j+" is prime number");
+   }
+   else{
+      System.out.println(j+" is not a prime number");
+   }
+ }
+}
+
+$ javac PrimeDemo.java
+$ java PrimeDemo
+
+Q.21)
+
+         
