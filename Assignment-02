@@ -15,6 +15,26 @@ $javac TablesC.java
 $java TablesC
 
 Q.17)
+import java.util.Scanner;
+public class ReverseN{
+ public static void main (String []args){
+    Scanner h = new Scanner (System.in); 
+       System.out.println("Enter the nimber:"); 
+          int i=0; 
+          int reN=0; 
+        h.nextInt(); 
+    while(i != 0){ 
+            reN=reN*10; 
+            reN=reN+(i%10); 
+            i=i/10; 
+          }
+    System.out.println ("Reverse number:" +reN); 
+    }
+}
+
+$ javac ReverseN.java
+$ java ReverseN
+
 
 Q.18)
 import java.util.Scanner;
