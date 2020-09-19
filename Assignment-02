@@ -144,3 +144,139 @@ $ javac PrimeNumbers.java
 $ java PrimeNumbers
 
 Q.21)
+import java.util.Scanner;
+class ArrSum{
+	
+	public static void main(String abc[])
+	{
+		int sum=0;
+		Scanner sc=new Scanner(System.in);
+		int arr[]=new int[10];
+		System.out.println("Enter ele in array");
+		for(int i=0;i<10;i++)
+		{
+			
+			arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<10;i++)
+		{
+			sum=sum+arr[i];
+		}
+		System.out.println("Sum is= " +sum);
+		int avg=sum/10;
+		System.out.println("avg is= " +avg);
+	}
+}
+
+$ javac ArrSum.java
+$ java ArrSum
+
+Q 22)
+class ArrRev{
+	
+	public static void main(String abc[])
+	{
+	   int arr[]=new int[]{2,5,4,3,7,8,9,10,1,6};
+	   int temp;
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   for(int j=0;j<arr.length-1;j++)
+		   {
+			   if(arr[j] < arr[j+1])
+			   {
+				   temp=arr[j];
+				   arr[j]=arr[j+1];
+				   arr[j+1]=temp;
+			   }				   
+		   }
+		   
+	   }
+	   for(int a:arr)
+	   {
+		   System.out.println(a);
+	   }
+	}
+
+$ javac ArrRev.java
+$ java ArrRev
+
+Q.23)
+import java.util.Scanner;
+class CheckArr{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of array");
+		int size=sc.nextInt();
+		int arr[]=new int[size];
+		System.out.println("Enter ele in array");
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		for(int i=arr.length-1;i>=0;i--)
+		{
+			System.out.println(arr[i]);
+		}
+		
+	}
+	
+	
+}
+
+$ javac CheckArr.java
+$ java CheckArr
+
+Q.24)
+class Que24{
+	
+	public static void main(String abc[])
+	{
+		int arr[]={2,3,4,5,6,9};
+		int search=8,count=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i] == search)
+			{
+				System.out.println(search +" Found at " +i+ " index" );
+				count ++;
+				break;
+			}
+			
+		}
+		if(count == 0)
+		{
+		System.out.println(search + " not Found at any index" );
+		}
+		
+	}
+}
+
+$ javac Que24.java
+$ java Que24
+
+Q 25)
+class Que25{
+	
+	public static void main(String abc[])
+	{
+		int sum=0,sum1=0;
+		int arr[]=new int[]{2,1,4,5,3,7,8,9,};
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i] % 2 == 0 )
+			{
+				sum=sum + arr[i];
+			}
+			else
+			{
+				sum1=sum1+arr[i];
+			}
+		}
+		System.out.println("sum of even num is " +sum);
+		System.out.println("sum of odd num is " +sum1);
+	}
+} 
+
+$ javac Que25.java
+$ java Que25
