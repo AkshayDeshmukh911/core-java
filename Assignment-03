@@ -34,3 +34,214 @@ $ javac A.java
 $ java A
 
 Q.27)
+import java.util.Scanner;
+class AB{
+   
+   public static void main(String argc[])
+   {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter size of array:");
+	   int size=sc.nextInt();
+	   int arr[]=new int[size];
+	   for(int i=0;i<arr.length;i++)
+	   {
+		   System.out.println("Enter ele:");
+		   arr[i]=sc.nextInt();
+	    }
+		   // show ele
+		  int temp;
+		 for(int i=0;i<arr.length;i++)
+		 {
+			 for(int j=0;j<arr.length-1;j++)
+			 {
+				if(arr[j] > arr[j+1])
+				{
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}					
+			 }
+		 }
+		 System.out.println("Smallest num : " + arr[0]);
+		 System.out.println("Greatest num : " + arr[size-1]);
+		 
+			 
+  }
+}
+
+$ javac AB.java
+$ java AB
+
+Q.28)
+import java.util.Scanner; 
+class strg{
+	
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENter the size:");
+		int size=sc.nextInt();
+		String s[]=new String[size];
+		System.out.println("enter ele of string type:");
+		for(int i=0;i<s.length;i++)
+		{
+			
+			//s[i]=sc.nextLine().split(" ");
+			s[i]=sc.next();
+		}
+		for(String a:s)
+			System.out.println(a);
+		
+	}
+}
+
+$ javac strg.java
+$ java strg
+
+Q.29)
+import java.util.Scanner;
+class Arr{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of array:");
+		int size=sc.nextInt();
+		int arr[][]=new int[size][];
+		
+		System.out.println("total number of one-D arrays in a two-D array are " + size);
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println("Enter columns for " +i + "th row " );
+			int col=sc.nextInt();
+			arr[i]=new int[col];
+			for(int j=0;j<arr[i].length;j++)
+			{
+				System.out.println("Enter ele");
+				arr[i][j]=sc.nextInt();
+				
+			}
+			System.out.println("number of ele present at " + i + "th row are " +col);
+		}
+}
+}
+
+$ javac Arr.java
+$ java Are
+
+Q.30)
+import java.util.Scanner;
+class Diagonal{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int arr[][]=new int[3][3];
+		//Take user ip
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				System.out.println("Enter ele:");
+				arr[i][j]=sc.nextInt();
+			}
+		}
+	// show	
+		for(int ar[]:arr)
+		{
+			for(int a:ar)
+			{
+			System.out.print(a+ " ");
+			}
+			System.out.println(" ");
+	}
+	// sum
+	int sum=0;
+	for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				if(j==i)
+				{
+					sum=sum+arr[i][j];
+				}
+			}
+		}
+	System.out.println(sum);
+	
+}
+}
+
+$ javac Diagonal.java
+$ java Diagonal
+
+Q.31)
+class Student{
+	 private int rno;// instance var
+	 private String name;// instance + ref var + primitive var 
+	 
+	 void setData(int roll,String nm)
+	 {
+		 rno=roll;
+		 name=nm;
+	 }
+	 void showData()
+	 {
+		 System.out.println("Roll no. is " +rno);
+		 System.out.println("name is: " +name);
+	 }
+	 
+ }
+ 
+// main method
+	class Que31{
+		public static void main(String ab[])
+		{
+			Student s1=new Student();
+			s1.setData(1,"Anjali badgujar");
+			s1.showData();
+			
+		}
+	}
+	 
+$ javac Que31.java
+$ java Que31
+
+Q.32)
+class Student{
+	 private int rno;// instance var
+	 private String name;// instance + ref var + primitive var 
+	  static int count;
+	 Student()
+	 {
+		 count++;
+	 }
+	 
+	 void setData(int roll,String nm)
+	 {
+		 rno=roll;
+		 name=nm;
+	 }
+	 void showData()
+	 {
+		 System.out.println("Roll no. is " +rno);
+		 System.out.println("name is: " +name);
+	 }
+	 
+	 
+ }
+ 
+// main method
+	class Que32{
+		public static void main(String ab[])
+		{
+			Student s1=new Student();
+			s1.setData(1,"Anjali badgujar");
+			s1.showData();
+			Student s2=new Student();
+			Student s3=new Student();
+			System.out.println(Student.count);
+		}
+	}
+
+$ javac Que32.java
+$ java Que32
