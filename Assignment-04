@@ -1,1 +1,135 @@
+Q.33)
+class student{
+ private int sno;
+ private String sname;
+ /*student(){ sno=12; sname="Akshay"; }*/ 
+     void set(int sno, String sname ){
+            this.sno=sno; 
+             this.sname=sname;
+           }
+    void show(){ 
+           System.out.println(sno+" +sname);
+             } 
+         } 
+  public class Qu_33{ 
+        public static void main (String []args){
+            student s=new student(); 
+            s.set(12, "Akshay"); 
+            s.show();
+    }
+ }
+
+$ javac Qu_33.java
+$ java Qu_33
+
+Q.34)
+import java.util.Scanner; 
+class Circle{
+ private double radius; 
+ private double area; 
+
+void init(){ 
+  Scanner sc = new Scanner (System.in); 
+  System.out.println("Enter the radius");
+  radius=sc.nextDouble();
+          }
+void CalculateArea(){ 
+   area=(3.14*radius*radius ); 
+          } 
+void display){ 
+    System.out.println("Area of circle is "+area);
+            } 
+     }
+public class CircleDemo{ 
+    public static void main (String []args){
+          Circle c = new Circle();
+          c.init(); 
+          c. CalculateArea(); 
+          c.display(); 
+         } 
+ }
+
+$ javac CircleDemo.java 
+$ java CircleDemo
+
+Q.35)
+import java.util.Scanner;
+class MathOperation{
+ static Scanner sc = new Scanner tem.in); 
+/*System.out.println("Enter the numbers : ");*/ 
+  static int a=sc.nextInt(); 
+  static int b=sc.nextInt(); 
+static void sum(){
+   int c = a+b; 
+   System.out.println("sum is "+c);  
+           }
+static void sub(){
+   int d = a-b;
+   System.out.println("sub is "+d); 
+         }
+static void mul(){
+   int e = a*b;
+   System.out.println("mul is "+e);
+          } 
+static void power(){
+  for (int i=1;i<b;i++){
+         a=a*a; 
+        }
+       System.out.println("power is "+a );
+ } 
+}  
+public class Calculater{
+ public static void main (String []args){
+       Mathoperation m = new MathOneration();
+        m.sum();
+        m.sub();
+        m.mul();
+        m.power();
+    }
+}
+
+$ javsc Calculater.java
+$ java Calculater
+
+Q.36) 
+
+import java.util.Scanner;
+class MathOperation{
+
+static void mul1( int a,int b){
+   int c = a*b; 
+   System.out.println("sum is "+c);  
+           }
+static void mul2( float a,float b,float c){
+   float d = a*b*c;
+   System.out.println("sub is "+d); 
+         }
+static void mul3( double a,int b){
+   double e = a*b;
+   System.out.println("mul is "+e);
+          } 
+static void mul4(){ 
+    int arr[]={ 2,3,4,5,6};
+   int k= 1;
+  for (int i=1;i<b;i++){
+         K=k*arr[i]; 
+        }
+       System.out.println("power is "+ k );
+ } 
+}  
+public class Calculater1{
+ public static void main (String []args){
+       Mathoperation m = new MathOneration();
+        m.mul1(2,2);
+        m.mul2(2.1f,2.2f,2.3f);
+        m.mul3(2.01,2);
+        m.mul4();
+    }
+}
+
+$ javsc Calculater1.java
+$ java Calculater1
+
+
+Q.37)
 
