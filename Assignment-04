@@ -132,4 +132,26 @@ $ java Calculater1
 
 
 Q.37)
+class Person{
+ private String name;
+ private int age; 
+void set(String name,int age ){
+   this.name=name;
+   this.age=age; } 
+void show(){
+   System.out.println(name+" +age);
+     } 
+} 
+public class PersonDemo{
+    public static void main (String []args){
+         Person p=new Person();
+         p.set("Akshay Deshmukh", 19); 
+         p.show();
+ } 
+} 
+
+$ javac PersonDemo.java 
+$ java PersonDemo 
+
+Q.38)
 
