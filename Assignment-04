@@ -96,19 +96,19 @@ Q.36)
 import java.util.Scanner;
 class MathOperation{
 
-static void mul1( int a,int b){
+static void mul( int a,int b){
    int c = a*b; 
    System.out.println("sum is "+c);  
            }
-static void mul2( float a,float b,float c){
+static void mul( float a,float b,float c){
    float d = a*b*c;
    System.out.println("sub is "+d); 
          }
-static void mul3( double a,int b){
+static void mul( double a,int b){
    double e = a*b;
    System.out.println("mul is "+e);
           } 
-static void mul4(){ 
+static void mul(){ 
     int arr[]={ 2,3,4,5,6};
    int k= 1;
   for (int i=1;i<b;i++){
@@ -120,10 +120,10 @@ static void mul4(){
 public class Calculater1{
  public static void main (String []args){
        Mathoperation m = new MathOneration();
-        m.mul1(2,2);
-        m.mul2(2.1f,2.2f,2.3f);
-        m.mul3(2.01,2);
-        m.mul4();
+        m.mul(2,2);
+        m.mul(2.1f,2.2f,2.3f);
+        m.mul(2.01,2);
+        m.mul();
     }
 }
 
