@@ -1,1 +1,172 @@
+Q.52)
+import java.util.Scanner; 
+public class CoVowel{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the name : ");
+		String s=sc.nextLine();
+		System.out.println("Number of vowels in name : "+CountVowel(s)); 
+	}
+	public static int CountVowel(String s){
+		int count=0; 
+	for(int i=0;i<s.length();i++){ 
+	if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u' || s.charAt(i)=='A' || s.charAt(i)=='E' || s.charAt(i)=='I' || s.charAt(i)=='O' || s.charAt(i)=='U'){ 
+	count++; 
+	} 
+	}
+	return count;
+	}
+}
 
+$javac CoVowel.java
+$java CoVowel
+
+Q.53)
+public class StringSum {
+	public static void main(String[] args) {
+		 
+		 String s = "67 89 23 67 12 55 66";
+		 String ar[]=s.split(" ");
+		try{
+				String s1 = ar[0];
+			String s2 = ar[1];
+			String s3 = ar[2];
+			String s4 = ar[3];
+			String s5 = ar[4];
+			String s6 = ar[5];
+			String s7 = ar[6];
+			int i = Integer.parseInt(s1);
+			int j = Integer.parseInt(s2);
+			int k = Integer.parseInt(s3);
+			int l = Integer.parseInt(s4);
+			int m = Integer.parseInt(s5);
+			int n = Integer.parseInt(s6);
+			int o = Integer.parseInt(s7);
+				int p=i+j+k+l+m+n+o;
+			System.out.println("Sum : "+p);
+		}catch(ArithmeticException |
+				NumberFormatException |
+				ArrayIndexOutOfBoundsException  e) {
+			System.out.println(e);
+		}
+	
+	}
+}
+
+$javac StringSum.java
+$java StringSum
+
+Q.54)
+public class StringRev {
+	public static void main(String[] args) {
+		String s =  "Akshay Deshmukh";
+	//	String ar[]=s.split(" ");
+	 char ar[]=s.toCharArray();
+			for(int i=0,j=ar.length-1;j>i;i++,j--){
+				char temp=ar[j];
+				ar[j]=ar[i];
+				ar[i]=temp;
+			}
+		System.out.print(new String(ar));
+	}
+}
+
+$javac StringRev.java
+$java StringRev
+
+Q.55)
+public class WordCount {
+	public static void main(String[] args) {
+		String s =  "Akshay Deshmukh";
+	//	String ar[]=s.split(" ");
+	int count=0;
+	boolean flag=true;
+			for(int i=0;i<s.length();i++){
+				char ch=s.charAt(i);
+				if(ch==' '){
+					flag=true;
+					continue; 
+				} 
+				if(flag){ 
+				count++;
+				}
+				flag = false;
+			}
+		System.out.print(count);
+	}
+	}
+
+$javac WordCount.java
+$ java WordCount
+
+Q.56)
+public class CapitalLetter{
+	public static void main(String[] args) {
+			String s =   "i am akshay deshmukh hello world";
+				char ar[]=s.toCharArray();
+	boolean flag=true;
+			for(int i=0;i<s.length();i++){
+				if(ar[i]==' '){
+					flag=true;
+					continue; 
+				} 
+				if(flag){
+					if(ar[i]>=97 && ar[i]<=122){
+				ar[i]-=32;
+					}
+				}
+				flag = false;
+			}
+		System.out.print(ar);
+	}
+}
+
+$javac CapitalLetter.java
+$java CapitalLetter
+
+Q.57)
+public class WordRev {
+	public static void main(String[] args) {
+		String s =  "i am akshay deshmukh hello world";
+		char ar[]=s.toCharArray();
+	int f=0,l=0;
+	boolean flag=true;
+			for(int i=0;i<s.length();i++){
+				if(ar[i]==' ' || i==ar.length-1){ 
+				l=(ar[i]==' ')?i-1:i;
+			while(l>f){ 
+			char temp=ar[l];
+			ar[l]=ar[f];
+			ar[f]=temp;
+			i--;
+			f++;
+				} 
+				f=i+1;
+				}
+			}
+		System.out.print(new String(ar));
+	}
+}
+
+$javac WordRev.java
+$java WordRev
+
+Q.58)
+import java.util.Scanner;
+public class WeekDay {
+	public static void main(String[] args) {
+		String ar[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+		Scanner sc=new Scanner(System.in);
+	     System.out.print("Enter your choice : ");
+		int i=sc.nextInt();
+		if(i>=0 && i<=6){
+		System.out.println(ar[i]);
+		}
+		else{ 
+		System.out.println("Choose right number betweem 0-6");
+		}
+	}
+}
+
+$javac WeekDay.java
+$java WeekDay
