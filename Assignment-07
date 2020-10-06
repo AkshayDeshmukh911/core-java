@@ -170,3 +170,37 @@ public class WeekDay {
 
 $javac WeekDay.java
 $java WeekDay
+
+Q.59)
+class Voter{
+	private int voterId;
+	private String name;
+	private int age;
+	public Voter(int voterId, String name, int age) {
+		super();
+		this.voterId = voterId;
+		this.name = name;
+		this.age = age;
+		try {
+		    if(age < 18)
+		    {
+			  
+		     }
+	}catch(NumberFormatException e)
+		{
+		
+		}
+	
+}
+}
+public class Que59 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  
+	}
+
+}
+
+$javac Que59.java
+$java Que59
