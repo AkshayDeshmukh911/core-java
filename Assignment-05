@@ -1,1 +1,275 @@
+Q.43)
+class OneBHK{
+	private int roomArea;
+	private int hallArea;
+	private int price;
+	private int total;
+	OneBHK()
+	{
+		
+		roomArea=0;
+		hallArea=0;
+		price=0;
+		System.out.println("in cobsre");
+		
+	}
+	OneBHK(int roomArea,int hallArea,int price){
+		this();
+		this.roomArea=roomArea;
+		this.hallArea=hallArea;
+		this.price=price;
+		this.total=this.total+price;
+	}
+	void show()
+	{
+		System.out.print(roomArea + " " + hallArea +" " + price+ " total of all flats " + total);
+	} 
+	
+}
+class TwoBHK extends OneBHK{
+	private int room2Area;
+	TwoBHK(){
+		 
+		room2Area=0;
+		System.out.println("cc");
+	}
+	TwoBHK(int roomArea,int room2Area,int hallArea,int price){
+		 super(roomArea,hallArea,price);
+		this.room2Area=room2Area;
+	}
+	void show()
+	{
+		//super.show();
+		System.out.println("room2Area "+room2Area);
+	}
+	
+}
+class Demo{
+	
+	public static void main(String args[])
+	{
+	   OneBHK b1=new TwoBHK(1,2,3,499000);
+	  b1.show();
+	   TwoBHK b2=new TwoBHK(4,5,6,798890);
+	   b2.show();
+	   TwoBHK b3=new TwoBHK(3,4,5,600000);
+	   b3.show();
+	}
+	
+}
 
+Q.44)
+import java.util.Scanner;
+ class Faculty{
+	 
+	 private int facultyId;
+	 protected double salary;
+	 void input()
+	 {   
+	      Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter facultyId");
+		  this.facultyId=sc.nextInt(); 
+        
+	 }
+	 void printSalary()
+	 {
+		System.out.println("salary is "+salary+ " facultyId = "+facultyId); 
+	 }
+ }
+ class FullTimeFaculty extends Faculty{
+	 private double basicSalary;
+	 private double allowance;
+	 void input()
+	 {
+		 super.input();
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter basicSalary");
+		  this.basicSalary=sc.nextDouble(); 
+		  System.out.println("Enter allowance");
+		  this.allowance=sc.nextDouble(); 
+		  
+	 }
+     void calculatedSalary(){
+        salary = basicSalary+allowance;
+     }	 
+ }
+ class PartTimeFaculty extends Faculty{
+	 
+	 private double workingHour;
+	 private double ratePerHour;
+	 void input()
+	 {
+		 
+		super.input();
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter workingHour");
+		  this.workingHour=sc.nextDouble(); 
+		 System.out.println("Enter ratePerHour");
+		  this.ratePerHour=sc.nextDouble(); 
+		//this.salary=workingHour+ratePerHour;
+	
+		
+	 }
+	 void calculatedSalary(){
+        salary = workingHour * ratePerHour;
+    }
+	 
+ }
+class Main{
+	public static void main(String args[])
+	{
+		PartTimeFaculty p=new PartTimeFaculty();
+		p.input();
+		p.calculatedSalary();
+		p.printSalary();
+		FullTimeFaculty f=new FullTimeFaculty();
+		f.input();
+		f.calculatedSalary();
+		f.printSalary();
+		
+		
+		
+	}
+}
+
+Q.45)
+class Student{
+	 private int rollno;
+	 private double percentage;
+	 Student()
+	 {
+		
+	 }
+	 Student()
+	 {
+		 
+		 
+	 }
+	 void show()
+	 {
+		 
+	 }
+}
+ class CollegeStudent extends Student{
+	 private int semester;
+	 CollegeStudent()
+	 {
+	 }
+	 CollegeStudent()
+	 {
+	 }
+	 void show()
+	 {
+		 super.show();
+		 System.out.println("Semester: " + semester);
+	 }
+	 
+ }
+ class SchoolStudent extends Student{
+	private int className;
+      SchoolStudent(){
+		  
+	  }		  
+      SchoolStudent(){
+		  
+	  }
+	  void show()
+	  {
+		  super.show();
+		  System.out.println("className: " +className);
+	  }
+ }
+ class Demo1{
+	 System.out.println(String args[])
+	 {
+		 CollegeStudent c1=new CollegeStudent();
+		 CollegeStudent c2=new CollegeStudent();
+		 SchoolStudent s1=new SchoolStudent();
+		 SchoolStudent s2=new SchoolStudent();
+		 SchoolStudent s3=new SchoolStudent();
+		 Student arr[]={c1,c2,s1,s2,s3};
+		 for(Student s:arr)
+			 s.show();
+	 }
+ }
+ 
+
+Q.46)
+class Person{
+	private int id;
+	private int sal;
+	
+	void setper(int id,int sal)
+	{
+		this.id=id;
+		this.sal=sal;
+	}
+	void show()
+	{
+		System.out.println("in person show");
+	}
+	
+}
+class Emp extends Person{
+	 void setEmp(int id,int sal)
+	{
+		//super.show();
+		System.out.println("in emp");
+	}
+	void show()
+	{
+		System.out.println("in emp show");
+	}
+	
+}
+class Demo2{
+	public static void main(String ac[])
+	{
+		
+		Person arr[] = {new Emp(),new Person()};
+		for(Person a : arr)
+		{
+		 if(a instanceof Emp){
+			
+		    Emp e=(Emp) a;
+	         e.show();
+			 e.setEmp(12,2300);
+		}
+		else{
+			System.out.println("no");
+		
+		}
+	}
+}
+}
+
+Q.47)
+class A{
+	A()
+	{
+		this(1);
+		System.out.println("In A");
+	}
+	A(int a)
+	{
+		System.out.println("In A perameterised "+ a);
+	}
+}
+class B extends A{
+	B()
+	{
+		this(6);
+		System.out.println("In B");
+	}
+	B(int c){
+		//super(5);
+		System.out.println("In B para " + c);
+	}
+}
+class DemoChin{
+	public static void main(String args[])
+	{
+		B b1=new B();
+	}
+	
+}
