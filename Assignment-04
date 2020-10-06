@@ -200,7 +200,157 @@ class EmpDemo{
 
 
 Q.39)
+import java.util.*;
+class Product{
+    int pid;
+    int price;
+    int quantity;
+    // int amt;
+    static int a[] = new int[5];
+    static int i=0;
+
+    Product(int pid , int price , int quantity){
+        this.pid = pid;
+        this.price = price;
+        this.quantity = quantity;
+    }
+    void show(){
+        System.out.println("Pid : "+pid+" Price : "+price+" Quantity : "+quantity);
+    }
+    static void amount(int price , int quantity){
+        a[i] = price * quantity ;
+      
+        i++;
+        // System.out.println("Total amount is : "+amt);
+       
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Product arr[] = new Product[5];
+        int arrPrice[] = new int[5];
+        for(int i=0 ; i<arr.length ; i++){
+            System.out.print("Enter the Pid  of product : ");
+            int pid = sc.nextInt();
+            System.out.print("Enter the Price  of product : ");
+            int price = sc.nextInt();
+            System.out.print("Enter the Quantity  of product : ");
+            int quantity = sc.nextInt();
+
+            Product p = new Product(pid,price,quantity);
+            arr[i]=p;
+            arrPrice[i] = arr[i].price;
+            Product.amount(arr[i].price , arr[i].quantity);
+            
+
+                       
+        }
+        int highestPrice = Arrays.stream(arrPrice).max().getAsInt();
+
+
+        System.out.println("Highest Price is "+highestPrice);
+        for(int k = 0 ; k<arrPrice.length ;k++){ // 4 = 500
+            if(arrPrice[k]==highestPrice){
+                System.out.println("Pid of highest Price is : "+arr[k].pid);
+            }
+        }
+        
+        for( Product j : arr) j.show();
+       
+        for ( int l=0 ; l<5; l++)
+             System.out.println("Total amount of "+l+" : "+Product.a[l]);
+    }
+}
+
+
 Q.40)
+import java.util.*;
+class Student{
+    int rollNo;
+    int age;
+    String name;
+    int score;
+    Student(int rollNo , int age , String name , int score){
+        this.rollNo = rollNo;
+        this.age = age;
+        this.name = name;
+        this.score = score;
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+       Student arr[] = new Student[5];
+       Scanner sc = new Scanner(System.in);
+        int arrScore[] = new int[5];
+       for (int i=0 ; i<arr.length ; i++){
+           System.out.print("Enter the Name : ");
+           String name = sc.next();
+
+           System.out.print("Enter the Roll Number : ");
+           int rollNo = sc.nextInt();
+           
+           System.out.print("Enter the Age : ");
+           int age = sc.nextInt();
+
+           System.out.print("Enter the score : " );
+           int score = sc.nextInt();
+            Student s = new Student(rollNo , age , name , score);
+            arr[i] = s;
+            arrScore[i] = arr[i].score;
+
+       }
+    System.out.println("asdfasdfsadfasfdadfasdfasfdadf"+arr[0].name);
+       Arrays.sort(arrScore);
+       for(int j = 0 ; j<arrScore.length ; j++){
+           if(arrScore[j]>=0 && arrScore[j] <=50) {
+               for(int m=0 ; m<arr.length ; m++){
+                   if(arrScore[j]==arr[m].score){
+                        System.out.println("\n\nGroup of [0-50] : SCORE "+arrScore[j]);
+                        System.out.println("Name : "+arr[m].name);
+                        System.out.println("Roll No : " + arr[m].rollNo);
+                        System.out.println("Age : "+ arr[m].age);
+                   }
+               }
+           }
+           if(arrScore[j]>50 && arrScore[j] <=65 ) {
+               for(int m=0 ; m<arr.length ; m++){
+                   if(arrScore[j]==arr[m].score){
+                        System.out.println("\n\nGroup of [50-65] : SCORE "+arrScore[j]);
+                        System.out.println("Name : "+arr[m].name);
+                        System.out.println("Roll No : " + arr[m].rollNo);
+                        System.out.println("Age : "+ arr[m].age);
+                   }
+               }
+           }
+           if(arrScore[j]>65 && arrScore[j] <=80) {
+               for(int m=0 ; m<arr.length ; m++){
+                   if(arrScore[j]==arr[m].score){
+                        System.out.println("\n\nGroup of [65-80] : SCORE "+arrScore[j]);
+                        System.out.println("Name : "+arr[m].name);
+                        System.out.println("Roll No : " + arr[m].rollNo);
+                        System.out.println("Age : "+ arr[m].age);
+                   }
+               }
+           }
+           if(arrScore[j]>80 && arrScore[j] <=100) {
+              for(int m=0 ; m<arr.length ; m++){
+                   if(arrScore[j]==arr[m].score){
+                        System.out.println("\n\nGroup of [80-100] : SCORE "+arrScore[j]);
+                        System.out.println("Name : "+arr[m].name);
+                        System.out.println("Roll No : " + arr[m].rollNo);
+                        System.out.println("Age : "+ arr[m].age);
+                   }
+               }
+           }
+
+           
+       }    
+    }
+} 
+
 
 Q.41)
 import java.util.Scanner;
@@ -257,4 +407,34 @@ class Thisfundemo{
 }
 
 Q.42)
+class Tile{
+    int sqLength;
+    Tile(int sqLength){
+        this.sqLength = sqLength;
+    }
 
+}
+class Floor extends Tile{
+    int length;
+    int width;
+    Floor(int sqLength, int length , int width){
+        super(sqLength);
+        this.length = length;
+        this.width = width;
+    }
+    void totalTiles(Tile t){
+        int l = this.length;
+        int w = this.width;
+        int area = l*w;
+        float totalTitle = t.sqLength / (float)area;
+        System.out.println(String.format("%.3f" , totalTitle));
+       
+    }
+}
+
+class Main{
+    public static void main(String[] agrs){
+        Floor f = new Floor(200 ,3,3);
+        f.totalTiles(f);
+    }
+}
