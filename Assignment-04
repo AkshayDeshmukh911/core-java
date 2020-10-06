@@ -154,4 +154,107 @@ $ javac PersonDemo.java
 $ java PersonDemo 
 
 Q.38)
+import java.util.Scanner;
+class Employee{
+	private static int empNo=0;
+	private double salary;
+	private static  double totalSalary=0;
+	Employee(double salary1)
+	{
+		empNo++;
+		salary=salary1;
+		totalSalary=totalSalary+salary;
+		
+	}
+	void show()
+	{
+		System.out.println("Total emp are = " + empNo +"  " + totalSalary);
+		
+	}
+}
+
+class EmpDemo{
+	static public void main(String abc[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of emp");
+		int count=sc.nextInt();
+		Employee arr[]=new Employee[count];
+		for(int i=0;i<arr.length;i++)
+		{
+		  System.out.println("Enter sal");
+		  double saln=sc.nextDouble();
+		  Employee e=new Employee(saln);
+		  arr[i]=e;
+		  if(count-1 ==arr.length){
+		  e.show();// show everytime after creating object
+		  }
+		}
+	
+	/*for(Employee a:arr)
+		a.show();
+	}*/
+	arr[count-1].show();
+}
+}
+
+
+Q.39)
+Q.40)
+
+Q.41)
+import java.util.Scanner;
+class ThisFun{
+	private int id;
+	private String  name;
+	private int id1;
+	private String  name1;
+	private int sal1;
+	ThisFun()
+	{
+		this(100,"anjali");// it should be first fun.
+		System.out.println("in non-para constr");
+	}
+	
+	ThisFun(int id,String name)
+	{ 
+	   //this();//error recursive constr call
+	     //Scanner sc=new Scanner(System.in);
+		 //System.out.println("Enter id2:");
+		 //int id2=sc.nextint();
+		this(5, "tushar",4000);
+		this.id=id;
+		this.name=name;
+		System.out.println("in para constr");
+	}
+	ThisFun(int id1,String name1,int sal1 )
+	{
+		//this();// error recursive constr call
+		this.id1=id1;
+		this.name1=name1;
+		this.sal1=sal1;
+		System.out.println("In three para constr");
+		
+	}
+	void show()
+	{
+		System.out.println(id +" " + name);
+		System.out.println("by " + id1 +" " + name1 + " " + sal1);
+	}
+	
+}
+
+
+class Thisfundemo{
+	
+	public static void main(String args[])
+	{
+		ThisFun f1=new ThisFun();
+		  f1.show();
+	}
+	
+	
+}
+
+Q.42)
 
