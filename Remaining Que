@@ -1,1 +1,234 @@
+Q.60)
 
+package Excep;
+import java.util.*;
+
+interface StudentFee
+{
+	int getFee() throws Exception;
+}
+class StudentChild implements StudentFee{
+	private int fee;
+	public int getFee() throws Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter fee : ");
+		fee=sc.nextInt();
+		if(fee<=0 || fee >100000)
+		{
+			throw new Exception("Invalid fee");
+		}
+		return fee;
+	}
+}
+public class Que60 {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		try {
+			StudentChild c=new StudentChild();
+			System.out.println(c.getFee());
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+		
+			
+	}
+
+}
+
+$javac Que60.java
+$java Que60
+
+Q.61)
+import java.util.Scanner;
+
+class MyThread extends Thread{
+	int row;
+	
+	MyThread(int row){
+		this.row = row;
+	}
+	
+	@Override
+	public void run() {
+		for(int i=0; i<row; i++) {
+			
+			for(int j=0; j<=i; j++) {
+				System.out.print("* ");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println();
+			
+		}
+	};
+}
+
+public class Que61 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows : ");
+		int row = sc.nextInt();
+		
+		MyThread m = new MyThread(row);
+		m.start();
+	}
+
+}
+
+$javac Que61.java
+$java Que61
+
+Q.62)
+import java.util.Scanner;
+
+class PrimeCheck implements Runnable{
+
+	int num;
+	
+	
+	PrimeCheck(int num){
+		this.num = num;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		int i;
+		for(i=2; i<num/2; i++) {
+			if(num%i == 0) {
+				System.out.println(+num+" is not a Prime number");
+				break;
+			}
+		}
+		if(num%i != 0) {
+			System.out.println(num+" is a Prime number");
+		}
+	}
+	
+}
+
+public class Que62 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number to check if it is a Prime number or not : ");
+		int num = sc.nextInt();
+		
+		PrimeCheck p = new PrimeCheck(num);
+		Thread t = new Thread(p);
+		
+		t.start();
+	}
+
+}
+
+$javac Que62.java
+$java Que62
+
+Q.63)
+public class Button {
+	ClickListener listener;
+	String name;
+	public Button(String name){
+		this.name = name;
+	}
+	
+	public void setOnClickListener(ClickListener l){
+		listener = l;
+	}
+	
+	public void click(){
+		listener.onClick();
+	}
+}
+
+
+Q.65)
+package in.cdac;
+
+public class Screen {
+	public static void main(String[] args) {
+		Button loginBtn = new Button("Login");
+		Button registeBtn = new Button("Register");
+		Button logoutBtn = new Button("Logout");
+		
+		LoginClickListener loginClickListener = new LoginClickListener();
+		loginBtn.setOnClickListener(loginClickListener);
+				
+		ClickListener l = new ClickListener() {
+			//implementation
+			@Override
+			public void onClick() {
+				System.out.println("You successfully registered!");
+			}
+		};
+		registeBtn.setOnClickListener(l);
+		
+		logoutBtn.setOnClickListener(new ClickListener() {
+			@Override
+			public void onClick() {
+				System.out.println("You are successfully Logged out!");
+			}
+		});
+		
+		
+		//user is performing the operations
+		registeBtn.click();
+		loginBtn.click();
+		logoutBtn.click();
+	}
+
+}
+
+class LoginClickListener implements ClickListener{
+	@Override
+	public void onClick() {
+		System.out.println("You successfully logged in!");
+	}
+}
+
+Q.66)
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class TreeSetDemo {
+	public static void main(String[] args) {
+//		TreeSet<Integer> set = new TreeSet<>();
+		ReverseOrder comparator = new ReverseOrder();
+		TreeSet<Integer> set  = new TreeSet<>(comparator);
+		set.add(10);
+		set.add(25); // 25 is duplicate
+		set.add(7);
+		set.add(15);
+		set.add(15);
+		set.add(15);
+		System.out.println(set);
+		//for integers natural sorting order is  - ascending order
+		
+		Student s1 = new Student(101,"Rahul", 100, 150, 175); // 425
+		Student s2 = new Student(102,"Rohan", 100, 200, 150); // 450
+		Student s3 = new Student(103,"Suresh", 130, 120, 140); // 390
+		
+		MarkComparator markComparator = new MarkComparator();
+		TreeSet<Student> stdSet = new TreeSet<>(markComparator);
+		stdSet.add(s3); // 
+		stdSet.add(s1);
+		stdSet.add(s2);
+		
+		System.out.println(stdSet);
+	}
+}
