@@ -1,1 +1,144 @@
+Q.48)
+import java.util.Scanner;
+abstract class Processor{
+	protected int data;
+	abstract void process();
+	void showData()
+	{
+		System.out.println("data is " +data);
+	}
+	
+}
+ class Factorial extends Processor{
+	void process()
+	{
+		this.data=1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter num to finf fact: ");
+		int num=sc.nextInt();
+		for(int i=1;i<=num;i++)
+		{
+			this.data=this.data*i;
+		}
+		
+	}
+}
+ class Circle extends Processor{
+	 void process()
+	 {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter radius to find area:");
+		 double r=sc.nextInt();
+		 this.data=(int)(3.14*r*r);
+	 }
+ }
+
+class Demo1{
+	public static void main(String ab[])
+	{
+		int choice;
+		do{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter choice 1.factorial 2.Area 0.Exit" );
+		 choice=sc.nextInt();
+		switch(choice)
+		{
+			case 1:
+		           Processor p=new Factorial();
+		           p.process();
+		           p.showData();
+				   break;
+			case 2:
+		           Processor p1=new Circle();
+		           p1.process();
+		           p1.showData();
+				   break;
+			default:
+			       System.out.println("Invalid choice: ");
+				   
+		}
+	}while(choice != 0);
+  }
+
+}
+
+Q.50)
+package assi6;
+import java.util.*;
+class Employee{
+	private int empId;
+	private String empName;
+	private double salary;
+	public Employee(int empId, String empName, double salary) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.salary = salary;
+	}
+	@Override
+	public String toString() {
+		return  empId + " " + empName + " "+ salary ;
+	}
+	@Override
+	public boolean equals(Object sup)
+	{
+		if(sup == null)
+			return false;
+		if(sup instanceof Employee)
+		{
+			Employee e=(Employee)sup;
+			return empId== e.empId;
+		}
+		return false;
+	}
+	
+	
+}
+public class Que50 {
+
+	public static void main(String[] args) {
+	
+		Scanner sc=new Scanner(System.in);
+			//1
+			System.out.println("Enter empId");
+			int eid1=sc.nextInt();
+			System.out.println("Enter Emp name:");
+			String name1=sc.next();
+			System.out.println("Enter Emp salary:");
+			Double sal1=sc.nextDouble();
+			Employee e1=new Employee(eid1,name1,sal1);
+			
+			//2
+			System.out.println("Enter empId");
+			int eid2=sc.nextInt();
+			System.out.println("Enter Emp name:");
+			String name2=sc.next();
+			System.out.println("Enter Emp salary:");
+			Double sal2=sc.nextDouble();
+			Employee e2=new Employee(eid2,name2,sal2);
+	       
+			System.out.println(e1.equals(e2));
+		    //3
+			System.out.println("Enter empId");
+			int eid3=sc.nextInt();
+			System.out.println("Enter Emp name:");
+			String name3=sc.next();
+			System.out.println("Enter Emp salary:");
+			Double sal3=sc.nextDouble();
+			Employee e3=new Employee(eid3,name3,sal3);
+	       
+			System.out.println(e2.equals(e3));
+			 System.out.println(e1.equals(e3));
+			//4
+              //print1
+			System.out.println(e1);
+		     System.out.println(e2);
+		     System.out.println(e3);
+		
+		sc.close();	
+	}
+
+}
+
+Q.51)
 
